@@ -50,14 +50,14 @@ export const Forks = styled.p`
 `;
 
 export const ForkImage = styled(GitBranch)`
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   margin-top: 1px;
 `;
 
 export const StarsImage = styled(Star)`
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   margin-top: 1px;
 `;
 
