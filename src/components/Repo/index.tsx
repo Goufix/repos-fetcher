@@ -4,27 +4,35 @@ import {
   Description,
   Details,
   Footer,
-  ForkImage,
+  ForkIcon,
   Forks,
-  ProfilePhoto,
+  RepositoryIcon,
   Stars,
-  StarsImage,
+  StarsIcon,
   User
 } from './styles';
 
-export default function Repo() {
+interface Props {
+  full_name: string;
+  description: string;
+  forks: string;
+  stars: string;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Repo(props: any) {
   return (
     <Container>
-      <ProfilePhoto />
-      <User> lffg / adonis-api-boilerplate </User>
+      <RepositoryIcon />
+      <User> {props.full_name} </User>
       <Footer>
-        <Description>AdonisJs 4.0.1 API boilerplate.</Description>
+        <Description>{props.description}</Description>
         <Details>
           <Forks>
-            <ForkImage /> 10
+            <ForkIcon /> {props.forks}
           </Forks>
           <Stars>
-            <StarsImage /> 10
+            <StarsIcon /> {props.stars}
           </Stars>
         </Details>
       </Footer>

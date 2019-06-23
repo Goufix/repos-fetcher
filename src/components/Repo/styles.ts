@@ -21,7 +21,7 @@ export const User = styled.span`
   padding: 0;
 `;
 
-export const ProfilePhoto = styled(BookOpen)`
+export const RepositoryIcon = styled(BookOpen)`
   margin: 5px;
   max-height: 50px;
   max-width: 50px;
@@ -49,13 +49,13 @@ export const Forks = styled.p`
   color: #6398ed;
 `;
 
-export const ForkImage = styled(GitBranch)`
+export const ForkIcon = styled(GitBranch)`
   width: 15px;
   height: 15px;
   margin-top: 1px;
 `;
 
-export const StarsImage = styled(Star)`
+export const StarsIcon = styled(Star)`
   width: 15px;
   height: 15px;
   margin-top: 1px;
