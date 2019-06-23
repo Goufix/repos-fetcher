@@ -1,11 +1,6 @@
 import React from 'react';
-import { Container, Luiz } from './styles';
+import Repo from '../Repo';
 
-export default function Index() {
-  return (
-    <>
-      <Container />
-      <Luiz />
-    </>
-  );
+export default function App() {
+  return <Repo />;
 }
