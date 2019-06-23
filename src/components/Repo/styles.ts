@@ -1,3 +1,4 @@
+import { BookOpen, GitBranch, Star } from 'react-feather';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -5,8 +6,8 @@ export const Container = styled.div`
   width: 100%;
   max-width: 350px;
 
-  background-color: #ddd;
-  border: 1px solid #333;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
 `;
 
 export const User = styled.span`
@@ -20,10 +21,55 @@ export const User = styled.span`
   padding: 0;
 `;
 
-export const ProfilePhoto = styled.img`
-  margin: 0;
-  padding: 0;
+export const ProfilePhoto = styled(BookOpen)`
+  margin: 5px;
   max-height: 50px;
   max-width: 50px;
   float: left;
+`;
+
+export const Description = styled.p`
+  display: flex;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+`;
+
+export const Forks = styled.p`
+  margin-top: 0;
+  margin: 0 3px;
+  display: flex;
+  font-size: 10px;
+  color: #6398ed;
+`;
+
+export const ForkImage = styled(GitBranch)`
+  width: 10px;
+  height: 10px;
+  margin-top: 1px;
+`;
+
+export const StarsImage = styled(Star)`
+  width: 10px;
+  height: 10px;
+  margin-top: 1px;
+`;
+
+export const Stars = styled.p`
+  margin-top: 0;
+  margin: 0 3px;
+  display: flex;
+  font-size: 10px;
+  color: #6398ed;
+`;
+
+export const Details = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;

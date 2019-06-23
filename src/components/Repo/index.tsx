@@ -1,11 +1,33 @@
 import React from 'react';
-import { Container, ProfilePhoto, User } from './styles';
+import {
+  Container,
+  Description,
+  Details,
+  Footer,
+  ForkImage,
+  Forks,
+  ProfilePhoto,
+  Stars,
+  StarsImage,
+  User
+} from './styles';
 
 export default function Repo() {
   return (
     <Container>
-      <ProfilePhoto src="https://avatars1.githubusercontent.com/u/23662020?v=4" />
+      <ProfilePhoto />
       <User> lffg / adonis-api-boilerplate </User>
+      <Footer>
+        <Description>AdonisJs 4.0.1 API boilerplate.</Description>
+        <Details>
+          <Forks>
+            <ForkImage /> 10
+          </Forks>
+          <Stars>
+            <StarsImage /> 10
+          </Stars>
+        </Details>
+      </Footer>
     </Container>
   );
 }
