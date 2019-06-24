@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Search } from 'react-feather';
-import { Container, IconWrapper, Input } from './styles';
+import { Container, Input, Submit } from './styles';
 
-export default function SearchBar() {
+interface Props {
+  onSubmit: Function;
+}
+
+export default function SearchBar(props: Props) {
+  const [user, setUser] = useState('');
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function handleSubmit(e: any) {
+    e.preventDefault();
+    props.onSubmit(user);
+  }
   return (
     <>
       <Container>
-        <Input />
-        <IconWrapper>{<Search />}</IconWrapper>
+        <form onSubmit={handleSubmit}>
+          <Input
+            placeholder="Search user repositories"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+          />
+          <Submit type="submit">
+            <Search width="20" height="20" />
+          </Submit>
+        </form>
       </Container>
     </>
   );
