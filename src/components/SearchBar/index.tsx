@@ -3,7 +3,7 @@ import { Search } from 'react-feather';
 import { Container, Input, Submit } from './styles';
 
 interface Props {
-  onSubmit: Function;
+  onSubmit(user: string): void;
 }
 
 export default function SearchBar(props: Props) {
