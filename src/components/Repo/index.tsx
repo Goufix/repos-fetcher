@@ -1,4 +1,5 @@
 import React from 'react';
+import Emoji from 'react-emoji-render';
 import {
   Container,
   Description,
@@ -6,6 +7,7 @@ import {
   Footer,
   ForkIcon,
   Forks,
+  Header,
   RepositoryIcon,
   Stars,
   StarsIcon,
@@ -13,7 +15,7 @@ import {
 } from './styles';
 
 interface Props {
-  full_name: string;
+  fullName: string;
   description: string;
   forks: string;
   stars: string;
@@ -23,10 +25,14 @@ interface Props {
 export default function Repo(props: any) {
   return (
     <Container>
-      <RepositoryIcon />
-      <User> {props.full_name} </User>
+      <Header>
+        <RepositoryIcon />
+        <User> {props.fullName} </User>
+      </Header>
       <Footer>
-        <Description>{props.description}</Description>
+        <Description>
+          <Emoji text={props.description} />
+        </Description>
         <Details>
           <Forks>
             <ForkIcon /> {props.forks}

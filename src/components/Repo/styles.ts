@@ -8,13 +8,16 @@ export const Container = styled.div`
 
   background-color: #fafafa;
   border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const User = styled.span`
-  width: 100%;
-  max-width: 350px;
-  height: 50px;
-
   font-weight: bold;
   font-size: 15px;
   margin: 0;
