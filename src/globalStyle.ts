@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background-color: #fff;
+  background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
