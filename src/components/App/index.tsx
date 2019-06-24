@@ -8,6 +8,7 @@ export default function App() {
       description=":package: AdonisJs 4.0.1 API boilerplate."
       forks="0"
       stars="0"
+      repositoryUrl="https://github.com/lffg/adonis-api-boilerplate"
     />
   );
 }

@@ -19,15 +19,16 @@ interface Props {
   description: string;
   forks: string;
   stars: string;
+  repositoryUrl: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function Repo(props: any) {
+export default function Repo(props: Props) {
   return (
     <Container>
       <Header>
         <RepositoryIcon />
-        <User> {props.fullName} </User>
+        <User href={props.repositoryUrl}> {props.fullName} </User>
       </Header>
       <Footer>
         <Description>

@@ -1,4 +1,4 @@
-import { BookOpen, GitBranch, Star } from 'react-feather';
+import { Book, GitBranch, Star } from 'react-feather';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-color: #fafafa;
   border: 1px solid #ddd;
   border-radius: 3px;
-  padding: 3px;
+  padding: 5px;
 `;
 
 export const Header = styled.div`
@@ -17,22 +17,26 @@ export const Header = styled.div`
   align-items: center;
 `;
 
-export const User = styled.span`
+export const User = styled.a`
+  text-decoration: none;
   font-weight: bold;
   font-size: 15px;
   margin: 0;
   padding: 0;
+  :visited {
+    color: #000;
+  }
 `;
 
-export const RepositoryIcon = styled(BookOpen)`
-  margin: 5px;
-  max-height: 50px;
-  max-width: 50px;
+export const RepositoryIcon = styled(Book)`
+  max-height: 30px;
+  max-width: 30px;
+  color: #6398ed;
   float: left;
+  margin-right: 5px;
 `;
 
 export const Description = styled.p`
-  display: flex;
   font-size: 11px;
   margin: 0;
   padding: 0;
@@ -41,7 +45,7 @@ export const Description = styled.p`
 export const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 10px;
 `;
 
 export const Forks = styled.p`
@@ -56,6 +60,7 @@ export const ForkIcon = styled(GitBranch)`
   width: 15px;
   height: 15px;
   margin-top: 1px;
+  margin-right: 3px;
 `;
 
 export const StarsIcon = styled(Star)`
