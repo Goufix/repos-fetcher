@@ -3,9 +3,10 @@ import Repo from '../Repo';
 import SearchBar from '../SearchBar';
 
 export default function App() {
+  function handleSearch(user: String) {}
   return (
     <>
-      <SearchBar />
+      <SearchBar onSubmit={handleSearch} />
       <Repo
         fullName="lffg/adonis-api-boilerplate"
         description=":package: AdonisJs 4.0.1 API boilerplate."
