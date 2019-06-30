@@ -23,6 +23,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 400px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -63,5 +64,9 @@ export const Submit = styled.button`
   max-width: 30px;
   width: 100%;
   height: 30px;
-  outline: 0;
+`;
+
+export const Align = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

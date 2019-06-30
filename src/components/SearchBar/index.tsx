@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search } from 'react-feather';
-import { Container, Input, Submit } from './styles';
+import { Align, Container, Input, Submit } from './styles';
 
 interface Props {
   onSubmit(user: string): void;
@@ -14,18 +14,25 @@ export default function SearchBar(props: Props) {
     e.preventDefault();
     props.onSubmit(user);
   }
+
+  function handleChange(e: any) {
+    setUser(e.target.value);
+  }
+
   return (
     <>
       <Container>
         <form onSubmit={handleSubmit}>
-          <Input
-            placeholder="Search user repositories"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-          />
-          <Submit type="submit">
-            <Search width="20" height="20" />
-          </Submit>
+          <Align>
+            <Input
+              placeholder="Digite o usuário"
+              value={user}
+              onChange={handleChange}
+            />
+            <Submit type="submit">
+              <Search width="20" height="20" />
+            </Submit>
+          </Align>
         </form>
       </Container>
     </>
