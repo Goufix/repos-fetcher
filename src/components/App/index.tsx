@@ -9,6 +9,7 @@ export default function App() {
   }
   return (
     <>
+      <h1>{user}</h1>
       <SearchBar onSubmit={handleSearch} />
       <Repo
         fullName="lffg/adonis-api-boilerplate"
