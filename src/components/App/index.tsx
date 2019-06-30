@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Repo from '../Repo';
 import SearchBar from '../SearchBar';
 
 export default function App() {
-  function handleSearch(user: String) {}
+  const [user, setUser] = useState('');
+  function handleSearch(user: string) {
+    setUser(user);
+  }
   return (
     <>
       <SearchBar onSubmit={handleSearch} />
